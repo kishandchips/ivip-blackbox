@@ -3,35 +3,11 @@
     <head>
         <style>
             body {
-                margin: 0;
-                padding: 0;
                 background: #000;
-                height: 100%;
-            }
-
-            iframe {
-                border: none;
-            }
-
-            #website {
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: relative;
-                z-index: 0;
-            }
-
-            #preloader {
-                width: 100%;
-                height: 100%;
-                background: #000;
-                position: absolute;
-                z-index: 100;
             }
         </style>
-        <script charset="utf-8" src="js/libs/cordova.js"></script>
-        <!--script charset="utf-8" src="js/libs/jquery.min.js"></script-->
-        <script charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
         //
@@ -43,18 +19,16 @@
             navigator.splashscreen.hide();
             var state = checkConnection();
             if(state != 'No network connection') {
-                alert('hello');
                 location.href = 'http://dev.kishandchips.com/ivipworld/website/build/blackbox/?app=1';
                 //location.href = 'http://www.ivipworld.com?app=1';
             } else{
                 location.href = 'no_internet.html';
             }
         }
-
         function checkConnection() {
             var networkState = navigator.connection.type;
 
-            var states = [];
+            var states = {};
             states[Connection.UNKNOWN]  = 'Unknown connection';
             states[Connection.ETHERNET] = 'Ethernet connection';
             states[Connection.WIFI]     = 'WiFi connection';
@@ -66,25 +40,9 @@
 
             return states[networkState];
         }
-        // $(function(){
-        //     var website = $('#website');
-        //     website.bind('load', function(){
-        //         console.log('loaded');
-        //         //console.log(website.contents().find('body'));
-        //         //setTimeout(function(){
-        //             $('#preloader').fadeOut();
-        //        // }, 2000);
-        //     });
-        //     website.on('unload', function(){
-        //         console.log('loading');
-        //         $('#preloader').fadeIn();
-        //     });
-        // });
 
         </script>
     </head>
     <body>
-        <!--div id="preloader"></div>
-        <iframe id="website" src="http://dev.kishandchips.com/ivipworld/website/build/blackbox/" style="width:100%; height:100%;"-->
     </body>
 </html>
