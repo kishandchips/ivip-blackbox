@@ -16,10 +16,10 @@
         // device APIs are available
         //
         function onDeviceReady() {
-            alert("hellooo");
             navigator.splashscreen.hide();
             var state = checkConnection();
             if(state != 'No network connection') {
+                alert("Connected");
                 location.href = 'http://dev.kishandchips.com/ivipworld/website/build/blackbox/?app=1';
                 //location.href = 'http://www.ivipworld.com?app=1';
             } else{
