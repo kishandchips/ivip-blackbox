@@ -16,8 +16,8 @@
         // device APIs are available
         //
         function onDeviceReady() {
+            alert('onDeviceReady');
             navigator.splashscreen.hide();
-            alert(navigator.splashscreen);
             var state = checkConnection();
             if(state != 'No network connection') {
                 alert("Connected");
