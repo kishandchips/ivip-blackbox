@@ -9,7 +9,7 @@
     <preference name="fullscreen" value="true" />
 	<preference name="splash-screen-duration" value="0"/>
     <preference name="permissions" value="none"/>
-    <preference name="phonegap-version" value="3.0.0" />
+    <preference name="phonegap-version" value="3.1.0" />
     <preference name="fullscreen" value="true" />
 	<access origin="*" subdomains="true" />
     
