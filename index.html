@@ -3,15 +3,39 @@
     <head>
         <style>
             body {
+                margin: 0;
+                padding: 0;
                 background: #000;
+                height: 100%;
             }
+
+            iframe {
+                border: none;
+            }
+
+            /*#website {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: relative;
+                z-index: 0;
+            }*/
+
+           /* #preloader {
+                width: 100%;
+                height: 100%;
+                background: #000;
+                position: absolute;
+                z-index: 100;
+            }*/
         </style>
-        <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
-        <script type="text/javascript" charset="utf-8">
+        <script charset="utf-8" src="js/libs/cordova.js"></script>
+        <script charset="utf-8" src="js/libs/jquery.min.js"></script>
+        <script charset="utf-8">
 
         // Wait for device API libraries to load
         //
-        //document.addEventListener('deviceready', onDeviceReady, false);
+        document.addEventListener('deviceready', onDeviceReady, false);
 
         // device APIs are available
         //
@@ -24,11 +48,13 @@
             } else{
                 location.href = 'no_internet.html';
             }
+
         }
+
         function checkConnection() {
             var networkState = navigator.connection.type;
 
-            var states = {};
+            var states = [];
             states[Connection.UNKNOWN]  = 'Unknown connection';
             states[Connection.ETHERNET] = 'Ethernet connection';
             states[Connection.WIFI]     = 'WiFi connection';
@@ -40,10 +66,21 @@
 
             return states[networkState];
         }
+        // $(function(){
+        //     var website = $('#website');
+        //     website.bind('load', function(){
+        //         setTimeout(function(){
+        //             $('#preloader').fadeOut();
+        //         }, 2000);
+        //     });
+
+        //     $('body').on('click', function(){
+        //         console.log('hello');
+        //         $('#preloader').fadeIn();
+        //     });
+        // });
 
         </script>
     </head>
-    <body>
-        <iframe src="http://dev.kishandchips.com/ivipworld/website/build/blackbox/?app=1" style="width:100%; height:100%;">
-    </body>
+    <body></body>
 </html>
