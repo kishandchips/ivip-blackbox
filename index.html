@@ -16,20 +16,17 @@
         // device APIs are available
         //
         function onDeviceReady() {
-            alert('onDeviceReady');
-            navigator.splashscreen.hide();
+            if(navigator.splashscreen) navigator.splashscreen.hide();
+
             var state = checkConnection();
             if(state != 'No network connection') {
-                alert("Connected");
-                location.href = 'http://dev.kishandchips.com/ivipworld/website/build/blackbox/?app=1';
-                //location.href = 'http://www.ivipworld.com?app=1';
+                location.href = 'http://localhost/ivipworld/website/build/blackbox/?app=1';
             } else{
-                alert("Not connected");
                 location.href = 'no_internet.html';
             }
         }
         function checkConnection() {
-            var networkState = navigator.connection.type;
+            var networkState = (navigator.connection) ? navigator.connection.type : false;
 
             var states = {};
             states[Connection.UNKNOWN]  = 'Unknown connection';
