@@ -6,9 +6,10 @@
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
     <preference name="fullscreen" value="true" />
+	<preference name="splash-screen-duration" value="100"/>
     <preference name="permissions" value="none"/>
     <preference name="phonegap-version" value="3.0.0" />
     <preference name="fullscreen" value="true" />
-	<access origin="*" />
+	<access origin="*" subdomains="true" />
     
 </widget>
