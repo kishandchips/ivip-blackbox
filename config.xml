@@ -11,5 +11,11 @@
     <preference name="phonegap-version" value="3.0.0" />
     <preference name="fullscreen" value="true" />
 	<access origin="*" subdomains="true" />
+
+  <features>
+    <feature name="InAppBrowser">
+      <param name="wp-package" value="InAppBrowser"/>
+    </feature>
+  </features>    
     
 </widget>
