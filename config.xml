@@ -12,5 +12,6 @@
     <preference name="fullscreen" value="true" />
 	<access origin="*" subdomains="true" />  
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
+    <preference name="stay-in-webview" value="false" />
     
 </widget>
