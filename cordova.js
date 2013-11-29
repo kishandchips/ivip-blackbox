@@ -2,7 +2,7 @@
 *add the proper cordova library
 ******************************************************************************/
 if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-	// Platform: ios
+    // Platform: ios
 // 2.9.0-0-g83dc4bd
 /*
  Licensed to the Apache Software Foundation (ASF) under one
@@ -6526,7 +6526,7 @@ require('cordova/channel').onNativeReady.fire();
 
 }
 else if (navigator.userAgent.match(/(Android)/)) {
-	// Platform: android
+    // Platform: android
 // 2.9.0-0-g83dc4bd
 /*
  Licensed to the Apache Software Foundation (ASF) under one
@@ -13475,7 +13475,7 @@ require('cordova/channel').onNativeReady.fire();
 })();var PhoneGap = cordova;
 }
 else{
-	// Platform: windowsphone
+    // Platform: windowsphone
 // 2.9.0rc1-12-g83dc4bd
 /*
  Licensed to the Apache Software Foundation (ASF) under one
