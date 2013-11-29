@@ -8,6 +8,7 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.3" />
     <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova" />
     <preference name="stay-in-webview" value="false" />
 
     <preference name="fullscreen" value="true" />
