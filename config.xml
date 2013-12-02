@@ -15,6 +15,6 @@
     <preference name="permissions" value="none"/>
     <preference name="phonegap-version" value="3.0.0" />
     <preference name="fullscreen" value="true" />
-	<access origin="*" subdomains="true" />  
+	<access origin="http://dev.kishandchips.com/ivipworld/" subdomains="true" />  
 
 </widget>
