@@ -13473,8 +13473,10 @@ require('cordova/channel').onNativeReady.fire();
 
 
 })();var PhoneGap = cordova;
-}
-else{
+
+
+} else{
+    alert('hello');
     // Platform: windowsphone
 // 2.9.0rc1-12-g83dc4bd
 /*
