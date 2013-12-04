@@ -1,3 +1,4 @@
+ alert(navigator.userAgent);
  /******************************************************************************
 *add the proper cordova library
 ******************************************************************************/
@@ -13476,7 +13477,6 @@ require('cordova/channel').onNativeReady.fire();
 
 
 } else{
-    alert('hello');
     // Platform: windowsphone
 // 2.9.0rc1-12-g83dc4bd
 /*
