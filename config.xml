@@ -9,6 +9,7 @@
     <gap:plugin name="org.apache.cordova.device" version="0.2.3" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <preference name="stay-in-webview" value="false" />
+    <preference name="BackgroundColor" value="0xff000000"/>
 
     <preference name="fullscreen" value="true" />
 	<preference name="splash-screen-duration" value="100"/>
