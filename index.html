@@ -18,7 +18,7 @@
                 z-index: 500;
             }
 
-            #siteloader {
+            #website {
                 position: absolute;
                 width: 100%;
                 top: 0;
@@ -26,11 +26,6 @@
                 z-index: 300;
                 height: 100%;
             }
-
-            #siteloader object {
-                width: 100%;
-                min-height: 100%;
-            }       
 
 
 
@@ -44,12 +39,27 @@
 
         // device APIs are available
         function onDeviceReady() {
-            $("#siteloader").html('<object data="http://ivipworld.com/blackbox_app.php" />');
-             // var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
-             // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-             // website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-             // website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-             // website.addEventListener('exit', function(event) { alert(event.type); });
+            // document.getElementById('siteloader').innerHTML = '<object id="website" data="http://ivipworld.com/blackbox_app.php" />';
+
+            
+            // website.addEventListener('onload', function(event) { alert('onload: ' + event.url); });
+            // website.addEventListener('onunload', function(event) { alert('onunload: ' + event.url); });
+            // var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
+            // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+            // website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+            // website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+            // website.addEventListener('exit', function(event) { alert(event.type); });
+
+            var website = document.getElementById('website');
+            console.log('website:' + website);
+            website.addEventListener('onload', function(e){
+                alert(e);
+            });
+
+            website.addEventListener('onbeforeunload', function(e){
+                alert(e);
+            });
+
         }
         </script>
     </head>
@@ -58,6 +68,6 @@
             Preloader
         </div>
 
-        <div id="siteloader"></div>
+        <iframe id="website" src="http://ivipworld.com/blackbox_app.php" />
     </body>
 </html>
