@@ -51,14 +51,14 @@
             // website.addEventListener('exit', function(event) { alert(event.type); });
 
             var website = document.getElementById('website');
-            console.log('website:' + website);
-            website.addEventListener('onload', function(e){
-                alert(e);
-            });
+            
+            website.onload = function(e){
+                alert('onload');
+            };
 
-            website.addEventListener('onbeforeunload', function(e){
-                alert(e);
-            });
+            website.onbeforeunload = function(e){
+                alert('onbeforeunload');
+            };
 
         }
         </script>
