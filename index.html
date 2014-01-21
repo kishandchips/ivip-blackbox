@@ -16,7 +16,7 @@
 
         // device APIs are available
         function onDeviceReady() {
-            var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
+            var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=yes');
              website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
              website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
              website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
