@@ -2,17 +2,36 @@
 <html>
     <head>
         <style>
+            html, body {
+                height: 100%;
+            }
+
             body {
                 background: #000;
                 color: #FFF;
             }
 
-            .preloader {
+            #preloader {
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 100000;
+                z-index: 500;
             }
+
+            #siteloader {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 300;
+                height: 100%;
+            }
+
+            #siteloader object {
+                width: 100%;
+                min-height: 100%;
+            }       
+
 
 
         </style>
@@ -25,17 +44,20 @@
 
         // device APIs are available
         function onDeviceReady() {
-             var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
-             website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-             website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-             website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-             website.addEventListener('exit', function(event) { alert(event.type); });
+            $("#siteloader").html('<object data="http://ivipworld.com/blackbox_app.php" />');
+             // var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
+             // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             // website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             // website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             // website.addEventListener('exit', function(event) { alert(event.type); });
         }
         </script>
     </head>
     <body>
-        <div class="preloader">
+        <div id="preloader">
             Preloader
         </div>
+
+        <div id="siteloader"></div>
     </body>
 </html>
