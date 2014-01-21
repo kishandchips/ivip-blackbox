@@ -10,69 +10,25 @@
                 background: #000;
                 color: #FFF;
             }
-
-            #preloader {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 500;
-            }
-
-            #website {
-                position: absolute;
-                width: 100%;
-                top: 0;
-                left: 0;
-                z-index: 300;
-                height: 100%;
-                border: none;
-            }
-
-
-
+            
         </style>
         <script src="phonegap.js"></script>
         <script>
 
-        // Wait for device API libraries to load
-        //
         document.addEventListener('deviceready', onDeviceReady, false);
 
         // device APIs are available
         function onDeviceReady() {
-            // document.getElementById('siteloader').innerHTML = '<object id="website" data="http://ivipworld.com/blackbox_app.php" />';
-
             
-            // website.addEventListener('onload', function(event) { alert('onload: ' + event.url); });
-            // website.addEventListener('onunload', function(event) { alert('onunload: ' + event.url); });
-            // var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
+            var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
             // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
             // website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
             // website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
             // website.addEventListener('exit', function(event) { alert(event.type); });
-
-            var website = document.getElementById('website');
-            
-            website.onload = function(e){
-                alert('onload');
-            };
-
-            website.onbeforeunload = function(e){
-                alert('onbeforeunload');
-            };
-
-            website.onunload = function(e){
-                alert('onunload');
-            };
-
         }
         </script>
     </head>
     <body>
-        <div id="preloader">
-            Preloader
-        </div>
-
-        <iframe id="website" src="http://ivipworld.com/blackbox_app.php" />
+      
     </body>
 </html>
