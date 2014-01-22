@@ -21,6 +21,7 @@
         // device APIs are available
         function onDeviceReady() {
             navigator.splashscreen.hide();
+            var state = checkConnection();
             if (state != 'none') {
                 var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
                 // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
@@ -35,9 +36,9 @@
         }
 
         function checkConnection() {
-            var networkState = navigator.connection.type;
-
-            var states = {};
+            var networkState = navigator.connection.type,
+                states = {};
+            
             states[Connection.UNKNOWN] = 'unknown';
             states[Connection.ETHERNET] = 'ethernet';
             states[Connection.WIFI] = 'wifi';
@@ -46,7 +47,7 @@
             states[Connection.CELL_4G] = '4g';
             states[Connection.CELL] = 'generic';
             states[Connection.NONE] = 'none';
-
+           
             return states[networkState];
         }
         </script>
