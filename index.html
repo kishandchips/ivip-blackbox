@@ -20,12 +20,34 @@
 
         // device APIs are available
         function onDeviceReady() {
-            
-            var website = window.open('http://ivipworld.com/blackbox_app.php', '_blank', 'location=no');
-            // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-            // website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-            // website.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-            // website.addEventListener('exit', function(event) { alert(event.type); });
+            navigator.splashscreen.hide();
+            if (state != 'none') {
+                var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
+                // website.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+                // website.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+                website.addEventListener('loaderror', function(event) { 
+                    window.location.href = 'no_internet.html';
+                });
+                // website.addEventListener('exit', function(event) { alert(event.type); });
+            } else {
+                window.location.href = 'no_internet.html';
+            }
+        }
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN] = 'unknown';
+            states[Connection.ETHERNET] = 'ethernet';
+            states[Connection.WIFI] = 'wifi';
+            states[Connection.CELL_2G] = '2g';
+            states[Connection.CELL_3G] = '3g';
+            states[Connection.CELL_4G] = '4g';
+            states[Connection.CELL] = 'generic';
+            states[Connection.NONE] = 'none';
+
+            return states[networkState];
         }
         </script>
     </head>
