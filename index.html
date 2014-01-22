@@ -13,8 +13,8 @@
             }
 
         </style>
-        <script src="phonegap.js"></script>
-        <!--script src="cordova.js"></script-->
+        <!--script src="phonegap.js"></script-->
+        <script src="cordova.js"></script>
         <script>
 
         document.addEventListener('deviceready', onDeviceReady, false);
@@ -24,7 +24,8 @@
             navigator.splashscreen.hide();
             var state = checkConnection();
             if (state != 'none') {
-                var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
+                window.location.href = 'http://ivipworld.com/blackbox_app.php';
+                //var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
                 // website.addEventListener('loadstart', function(event) { 
                 //     navigator.splashscreen.hide();
                 // });
