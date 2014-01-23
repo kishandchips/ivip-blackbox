@@ -5,23 +5,21 @@
 
     <icon src="icon.png" />
     <gap:splash src="images/splash.png" />
+    <gap:splash src="images/splash.png" gap:platform="ios" width="640" height="1136" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
+
     <preference name="stay-in-webview" value="false" />
     <preference name="BackgroundColor" value="0x00000000"/>
 
 	<preference name="splash-screen-duration" value="100"/>
     <preference name="permissions" value="none"/>
-    <preference name="phonegap-version" value="3.1.0" />
+    <preference name="phonegap-version" value="3.0.0" />
     <preference name="fullscreen" value="true" />
 	<access origin="*" subdomains="true" /> 
 
     <preference name="android-minSdkVersion" value="14" />
-
-    <!-- 
-    <gap:platforms> 
-        <gap:platform name="android" minVersion="2.1" />
-    </gap:platforms>
-    -->
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    
 </widget>
