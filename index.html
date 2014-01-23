@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            body {
-                background: #1148ae;
-                color: #FFF;
-                padding: 0;
-                margin: 0;
-            }
+	<head>
+		<style>
+			body {
+				background: #000;
+				color: #FFF;
+				padding: 0;
+				margin: 0;
+			}
 
-        </style>
-        <script src="phonegap.js"></script>
-        <!--script src="cordova.js"></script-->
-        <script>
+		</style>
+		<script src="phonegap.js"></script>
+		<!--script src="cordova.js"></script-->
+		<script>
 
-        document.addEventListener('deviceready', onDeviceReady, false);
+		document.addEventListener('deviceready', onDeviceReady, false);
 
-        // device APIs are available
-        function onDeviceReady() {
-            // navigator.splashscreen.hide();
-            // var state = checkConnection();
-            // if (state != 'none') {
-                //window.location.href = 'http://ivipworld.com/blackbox_app.php';
-                var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
-                // website.addEventListener('loadstart', function(event) { 
-                //     navigator.splashscreen.hide();
-                // });
-                
-                // website.addEventListener('loadstop', function(event) { 
+		// device APIs are available
+		function onDeviceReady() {
+			navigator.splashscreen.hide();
+			// var state = checkConnection();
+			// if (state != 'none') {
+				//window.location.href = 'http://ivipworld.com/blackbox_app.php';
+				setTimeout(function() {
+					var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
+					
+				}, 2000);
 
-                // });
+				// website.addEventListener('loadstart', function(event) { 
+				//     navigator.splashscreen.hide();
+				// });
+				
+				// website.addEventListener('loadstop', function(event) { 
 
-                // website.addEventListener('loaderror', function(event) { 
-                //     window.location.href = 'no_internet.html';
-                // });
-                // website.addEventListener('exit', function(event) { alert(event.type); });
-            // } else {
-            //     window.location.href = 'no_internet.html';
-            // }
-        }
+				// });
 
-        function checkConnection() {
-            var networkState = navigator.connection.type,
-                states = {};
-            
-            states[Connection.UNKNOWN] = 'unknown';
-            states[Connection.ETHERNET] = 'ethernet';
-            states[Connection.WIFI] = 'wifi';
-            states[Connection.CELL_2G] = '2g';
-            states[Connection.CELL_3G] = '3g';
-            states[Connection.CELL_4G] = '4g';
-            states[Connection.CELL] = 'generic';
-            states[Connection.NONE] = 'none';
-           
-            return states[networkState];
-        }
-        </script>
-    </head>
-    <body>
-    </body>
+				// website.addEventListener('loaderror', function(event) { 
+				//     window.location.href = 'no_internet.html';
+				// });
+				// website.addEventListener('exit', function(event) { alert(event.type); });
+			// } else {
+			//     window.location.href = 'no_internet.html';
+			// }
+		}
+
+		function checkConnection() {
+			var networkState = navigator.connection.type,
+				states = {};
+			
+			states[Connection.UNKNOWN] = 'unknown';
+			states[Connection.ETHERNET] = 'ethernet';
+			states[Connection.WIFI] = 'wifi';
+			states[Connection.CELL_2G] = '2g';
+			states[Connection.CELL_3G] = '3g';
+			states[Connection.CELL_4G] = '4g';
+			states[Connection.CELL] = 'generic';
+			states[Connection.NONE] = 'none';
+		   
+			return states[networkState];
+		}
+		</script>
+	</head>
+	<body>
+	</body>
 </html>
