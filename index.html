@@ -5,6 +5,18 @@
             body {
                 background: #1148ae;
                 color: #FFF;
+                padding: 0;
+                margin: 0;
+            }
+
+            #website {
+                position: relative;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 300;
+                height: 90%;
+                border: none;
             }
 
         </style>
@@ -20,7 +32,7 @@
             // var state = checkConnection();
             // if (state != 'none') {
                 //window.location.href = 'http://ivipworld.com/blackbox_app.php';
-                var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
+                //var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
                 // website.addEventListener('loadstart', function(event) { 
                 //     navigator.splashscreen.hide();
                 // });
@@ -53,9 +65,13 @@
            
             return states[networkState];
         }
+
+        function preload(){
+            alert("OMFG!!!");
+        }
         </script>
     </head>
     <body>
-      
+        <iframe id="website" src="http://ivipworld.com/blackbox/?app=1" ></iframe>
     </body>
 </html>
