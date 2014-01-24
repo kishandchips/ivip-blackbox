@@ -3,7 +3,7 @@
 	<head>
 		<style>
 			body {
-				background: #000;
+				background: #000 url(images/intro.png) no-repeat center center;
 				color: #FFF;
 				padding: 0;
 				margin: 0;
@@ -24,24 +24,14 @@
 
 			if (state != 'none') {
 				//window.location.href = 'http://ivipworld.com/blackbox_app.php';
-				//setTimeout(function() {
+				setTimeout(function() {
 					var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
 					
-					// website.addEventListener('loadstart', function(event) { 
-					// 	if(!firstLoad) {
-					// 		alert(event.url);
-					// 		website.close();
-					// 		website = window.open(event.url, '_self', 'location=yes&hidden=yes');
-					// 		firstLoad = true;
-					// 	}
-					// //    navigator.splashscreen.hide();
-					// });
-					
-					// website.addEventListener('loadstop', function(event) { 
-					// 	website.show();
-					// });
+					website.addEventListener('loadstop', function(event) { 
+						website.show();
+					});
 
-				//}, 2000);
+				}, 2000);
 
 				website.addEventListener('loaderror', function(event) { 
 				    window.location.href = 'no_internet.html';
