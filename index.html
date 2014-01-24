@@ -10,8 +10,8 @@
 			}
 
 		</style>
-		<script src="phonegap.js"></script>
-		<!--script src="cordova.js"></script-->
+		<!--script src="phonegap.js"></script-->
+		<script src="cordova.js"></script>
 		<script>
 		var firstLoad = true;
 		document.addEventListener('deviceready', onDeviceReady, false);
@@ -20,7 +20,8 @@
 		function onDeviceReady() {
 
 			//navigator.splashscreen.hide();
-			// var state = checkConnection();
+			var state = checkConnection();
+			alert(state);
 			if (state != 'none') {
 				//window.location.href = 'http://ivipworld.com/blackbox_app.php';
 				//setTimeout(function() {
