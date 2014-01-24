@@ -27,20 +27,17 @@
 			var state = checkConnection();
 
 			if (state != 'none') {
-				//window.location.href = 'http://ivipworld.com/blackbox_app.php';
-				setTimeout(function() {
-					var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
-					
-					website.addEventListener('loadstop', function(event) { 
-						website.show();
-					});
 
-				}, 2000);
+				var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
+				
+				website.addEventListener('loadstop', function(event) { 
+					website.show();
+				});
 
 				website.addEventListener('loaderror', function(event) { 
 				    window.location.href = 'no_internet.html';
 				});
-				//website.addEventListener('exit', function(event) { alert(event.type); });
+
 			} else {
 			    window.location.href = 'no_internet.html';
 			}
