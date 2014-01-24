@@ -3,7 +3,7 @@
 	<head>
 		<style>
 			body {
-				background: #000;
+				background: #FF6600;
 				color: #FFF;
 				padding: 0;
 				margin: 0;
@@ -22,22 +22,27 @@
 			// var state = checkConnection();
 			// if (state != 'none') {
 				//window.location.href = 'http://ivipworld.com/blackbox_app.php';
-				setTimeout(function() {
-					var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no');
-				}, 2000);
+				//setTimeout(function() {
+					var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=no&hidden=yes');
+					website.addEventListener('loadstart', function(event) { 
+						website.close();
+						website = window.open(event.url, '_self', 'location=no&hidden=yes');
+					//    navigator.splashscreen.hide();
+					});
+					
+					website.addEventListener('loadstop', function(event) { 
+						website.show();
+					});
 
-				// website.addEventListener('loadstart', function(event) { 
-				//     navigator.splashscreen.hide();
-				// });
+				//}, 2000);
+
 				
-				// website.addEventListener('loadstop', function(event) { 
+				
 
-				// });
-
-				// website.addEventListener('loaderror', function(event) { 
-				//     window.location.href = 'no_internet.html';
-				// });
-				// website.addEventListener('exit', function(event) { alert(event.type); });
+				website.addEventListener('loaderror', function(event) { 
+				    window.location.href = 'no_internet.html';
+				});
+				//website.addEventListener('exit', function(event) { alert(event.type); });
 			// } else {
 			//     window.location.href = 'no_internet.html';
 			// }
