@@ -2,16 +2,20 @@
 <html>
 	<head>
 		<style>
+			html, body {
+				height: 100%;
+			}
 			body {
 				background: #000 url(images/intro.png) no-repeat center center;
+				background-size: 40%;
 				color: #FFF;
 				padding: 0;
 				margin: 0;
 			}
 
 		</style>
-		<!--script src="phonegap.js"></script-->
-		<script src="cordova.js"></script>
+		<script src="phonegap.js"></script>
+		<!--script src="cordova.js"></script-->
 		<script>
 		var firstLoad = true;
 		document.addEventListener('deviceready', onDeviceReady, false);
