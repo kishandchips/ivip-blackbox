@@ -3,7 +3,7 @@
 
     <name>BlackBox</name>
 
-    <icon src="icon.png" />
+    <icon src="images/icon.png" />
     <gap:splash src="images/splash.png" />
     <gap:splash src="images/splash.png" gap:platform="ios" width="640" height="1136" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
