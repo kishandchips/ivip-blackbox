@@ -31,7 +31,9 @@
 				var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
 				
 				website.addEventListener('loadstop', function(event) { 
-					website.show();
+					setTimeout(function(){
+						website.show();
+					}, 2000);
 				});
 
 				website.addEventListener('loaderror', function(event) { 
