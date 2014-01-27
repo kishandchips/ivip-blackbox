@@ -21,6 +21,8 @@
     <access origin="kishandchips.com" subdomains="true" /> 
     <access origin="fonts.com" subdomains="true" /> 
     <access origin="google-analytics.com" subdomains="true" /> 
+    <access origin="googleapis.com" subdomains="true" /> 
+    
 
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
