@@ -17,12 +17,14 @@
     <preference name="permissions" value="none"/>
     <preference name="phonegap-version" value="3.1.0" />
     <preference name="fullscreen" value="true" />
-    <access origin="ivipworld.com" subdomains="true" /> 
+
+    <access origin="*" subdomains="true" /> 
+    <!--access origin="ivipworld.com" subdomains="true" /> 
     <access origin="kishandchips.com" subdomains="true" /> 
     <access origin="fonts.com" subdomains="true" /> 
     <access origin="google-analytics.com" subdomains="true" /> 
-    <access origin="googleapis.com" subdomains="true" /> 
-    
+    <access origin="googleapis.com" subdomains="true" /--> 
+
 
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
