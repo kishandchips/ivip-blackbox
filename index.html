@@ -17,7 +17,7 @@
 		<script src="phonegap.js"></script>
 		<!--script src="cordova.js"></script-->
 		<script>
-		
+
 		document.addEventListener('deviceready', onDeviceReady, false);
 
 		// device APIs are available
@@ -28,17 +28,17 @@
 
 			if (state != 'none') {
 
-				// var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
+				var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
 				
 				// website.addEventListener('loadstop', function(event) { 
 				// 	setTimeout(function(){
 				// 		website.show();
-				// 	}, 2000);
+				// 	}, 3000);
 				// });
 
-				// website.addEventListener('loaderror', function(event) { 
-				//     window.location.href = 'no_internet.html';
-				// });
+				website.addEventListener('loaderror', function(event) { 
+				    window.location.href = 'no_internet.html';
+				});
 
 			} else {
 			    window.location.href = 'no_internet.html';
