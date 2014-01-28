@@ -27,6 +27,6 @@
 
 
     <preference name="android-minSdkVersion" value="14" />
-    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <!--preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" /-->
 
 </widget>
