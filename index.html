@@ -22,7 +22,7 @@
 
 		// device APIs are available
 		function onDeviceReady() {
-			//if(navigator.splashscreen) navigator.splashscreen.hide();
+			if(navigator.splashscreen) navigator.splashscreen.hide();
 			var state = checkConnection();
 
 			if (state != 'none') {
