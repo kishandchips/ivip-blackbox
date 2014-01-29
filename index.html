@@ -22,11 +22,10 @@
 
 		// device APIs are available
 		function onDeviceReady() {
-			alert(navigator.splashscreen);
 			if(navigator.splashscreen) navigator.splashscreen.hide();
-			// var state = checkConnection();
+			var state = checkConnection();
 
-			// if (state != 'none') {
+			if (state != 'none') {
 
 				var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
 				
@@ -36,13 +35,13 @@
 					}, 3000);
 				});
 
-			// 	website.addEventListener('loaderror', function(event) { 
-			// 	    window.location.href = 'no_internet.html';
-			// 	});
+				website.addEventListener('loaderror', function(event) { 
+				    window.location.href = 'no_internet.html';
+				});
 
-			// } else {
-			//     window.location.href = 'no_internet.html';
-			// }
+			} else {
+			    window.location.href = 'no_internet.html';
+			}
 		}
 
 		function checkConnection() {
