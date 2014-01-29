@@ -29,11 +29,11 @@
 
 				var website = window.open('http://ivipworld.com/blackbox_app.php', '_self', 'location=yes&hidden=yes');
 				
-				website.addEventListener('loadstop', function(event) { 
-					setTimeout(function(){
-						website.show();
-					}, 3000);
-				});
+				// website.addEventListener('loadstop', function(event) { 
+				// 	setTimeout(function(){
+				// 		website.show();
+				// 	}, 3000);
+				// });
 
 				website.addEventListener('loaderror', function(event) { 
 				    window.location.href = 'no_internet.html';
