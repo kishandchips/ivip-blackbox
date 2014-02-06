@@ -6,33 +6,79 @@
     <gap:plugin name="org.apache.cordova.network-information" />
 
     <name>BlackBox</name>
+    
+
+    <!-- ICONS  -->
 
     <icon src="images/icon.png" />
-    <gap:splash src="images/splash.png" />
-    <gap:splash src="images/splash.png" gap:platform="ios" width="640" height="1136" />
+
+    <!-- SPLASH SCREENS -->
+        
+    <gap:splash src="images/splash.png" /> <!-- default 320x480 pixels -->
+        
+    <gap:splash src="images/splash.png" gap:platform="ios" width="320" height="480" /> <!-- iPhone & iPod Touch non retina -->
+    <gap:splash src="images/splash.png" gap:platform="ios" width="640" height="960" /> <!-- iPhone & iPod Touch retina 4- -->
+    <gap:splash src="images/splash.png" gap:platform="ios" width="640" height="1136" /> <!-- iPhone & iPod Touch retina 5+ -->
+    <gap:splash src="images/splash.png" gap:platform="ios" width="1024" height="768" /> <!-- iPad non retina -->
+    <gap:splash src="images/splash.png" gap:platform="ios" width="768" height="1024" /> <!-- iPad non retina -->
+    <gap:splash src="images/splash.png" gap:platform="ios" width="2048" height="1496" /> <!-- iPad retina -->
+    <gap:splash src="images/splash.png" gap:platform="ios" width="1536" height="2008" /> <!-- iPad retina -->
+        
+    <gap:splash src="images/splash.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
+    <gap:splash src="images/splash.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
+    <gap:splash src="images/splash.png" gap:platform="android" gap:density="hdpi" /> <!-- 480x800 -->
+    <gap:splash src="images/splash.png" gap:platform="android" gap:density="xhdpi" /> <!-- 720x1280 -->
+        
+    <gap:splash src="images/splash.jpg" gap:platform="winphone" /> <!-- Windows Phone 7 480x800 -->
+
+    <!-- PLATFORM SELECTION -->
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+
+
+    <!-- GENERAL PREFERENCES -->
+        
+    <preference name="phonegap-version" value="3.1.0" />
+    <preference name="orientation" value="default" />
+    <preference name="fullscreen" value="true" /> <!-- remove the upper bar on iOS and Android -->
+    <preference name="BackgroundColor" value="0x000000"/>
+    <preference name="stay-in-webview" value="true" />
+        
+    <!-- iOS PREFERENCES -->
     
-    <!--preference name="AutoHideSplashScreen" value="false" /-->
+    <preference name="target-device" value="universal" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="false" />
+    <preference name="exit-on-suspend" value="false" />
+
+    <preference name="webviewbounce" value="false" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="auto-hide-splash-screen" value="true" /> <!-- if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="SplashScreenDelay" value="0" />
 
-    <preference name="stay-in-webview" value="true" />
-    <preference name="BackgroundColor" value="0x000000"/>
+
+    <!-- ANDROID PREFERENCES -->
+        
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-targetSdkVersion" value="19" /> <!-- targeting Android 4.4 -->
+    <preference name="android-installLocation" value="auto" />
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <preference name="splash-screen-duration" value="5000" />
+
+    <preference name="load-url-timeout" value="20000" />
+        
+    <!-- PHONEGAP API FEATURES PREFERENCES -->
+        
+    
+
+    
 
     <preference name="permissions" value="none"/>
-    <preference name="phonegap-version" value="3.1.0" />
-    <preference name="fullscreen" value="true" />
 
-    <access origin="*" subdomains="true" /> 
-    <!--access origin="ivipworld.com" subdomains="true" /> 
-    <access origin="kishandchips.com" subdomains="true" /> 
-    <access origin="fonts.com" subdomains="true" /> 
-    <access origin="google-analytics.com" subdomains="true" /> 
-    <access origin="googleapis.com" subdomains="true" /--> 
-
-  
-
-    <preference name="android-minSdkVersion" value="14" />
-    <!--preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" /-->
-
-   
+    <access origin="*" subdomains="true" />
 
 </widget>
