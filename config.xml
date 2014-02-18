@@ -84,17 +84,16 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-targetSdkVersion" value="19" /> <!-- targeting Android 4.4 -->
     <preference name="android-installLocation" value="auto" />
+    <preference name="android-installLocation" value="auto" />
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <preference name="android-debuggable" value="false" />
     <preference name="splash-screen-duration" value="5000" />
 
     <preference name="load-url-timeout" value="20000" />
-        
+
     <!-- PHONEGAP API FEATURES PREFERENCES -->
         
     
-
-    
-
     <preference name="permissions" value="none"/>
 
     <access origin="*" subdomains="true" />
