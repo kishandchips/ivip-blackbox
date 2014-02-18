@@ -10,7 +10,25 @@
 
     <!-- ICONS  -->
 
-    <icon src="images/icon.png" />
+    <icon src="images/icon.png" /><!-- default 512 pixels -->
+
+    <icon src="images/icon.png" gap:platform="ios" width="57" height="57" /> <!-- iPhone & iPod Touch non retina iOS6 -->
+    <icon src="images/icon.png" gap:platform="ios" width="72" height="72" /> <!-- iPad non retina iOS6 -->
+    <icon src="images/icon.png" gap:platform="ios" width="76" height="76" /> <!-- iPad non retina iOS7 -->
+    <icon src="images/icon.png" gap:platform="ios" width="114" height="114" /> <!-- iPhone & iPod Touch retina iOS6 -->
+    <icon src="images/icon.png" gap:platform="ios" width="120" height="120" /> <!-- iPhone & iPod Touch retina iOS7 -->
+    <icon src="images/icon.png" gap:platform="ios" width="144" height="144" /> <!-- iPad retina iOS6 -->
+    <icon src="images/icon.png" gap:platform="ios" width="152" height="152" /> <!-- iPad retina iOS7 -->
+        
+    <icon src="images/icon.png" gap:platform="android" gap:density="ldpi" /> <!-- 36 pixels -->
+    <icon src="images/icon.png" gap:platform="android" gap:density="mdpi" /> <!-- 48 pixels -->
+    <icon src="images/icon.png" gap:platform="android" gap:density="hdpi" /> <!-- 72 pixels -->
+    <icon src="images/icon.png" gap:platform="android" gap:density="xhdpi" /> <!-- 96 pixels -->
+    <icon src="images/icon.png" gap:platform="android" gap:density="xxhdpi" /> <!-- 144 pixels -->
+    <icon src="images/icon.png" gap:platform="android" gap:density="xxxhdpi" /> <!-- 192 pixels -->
+        
+    <icon src="images/icon.png" gap:platform="winphone" /> <!-- 57 pixels -->
+    <icon src="images/icon.png" gap:platform="winphone" gap:role="background" /> <!-- 72 pixels -->
 
     <!-- SPLASH SCREENS -->
         
